@@ -41,7 +41,7 @@ export default class TabView extends Component {
     render() {
         return (
             <TabNavigator
-                hidesTabTouch={true}
+                hidesTabTouch={false}
                 tabBarShadowStyle={[styles.tabbar,(this.state.hideTabBar?styles.hide:{})]}
                 sceneStyle={{paddingBottom:styles.tabbar.height}}>
                 {
