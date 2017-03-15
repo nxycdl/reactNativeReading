@@ -1,6 +1,6 @@
 1.  Could not get batchedbridge, make sure your bundle is packaged correctly
-    ÔÚµ±Ç°android Ä¿Â¼ÏÂandroid/app/src/main/ĞÂ½¨assetsÄ¿Â¼Ö´ĞĞÏÂÃæµÄ
+    åœ¨å½“å‰android ç›®å½•ä¸‹android/app/src/main/æ–°å»ºassetsç›®å½•æ‰§è¡Œä¸‹é¢çš„
     react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
-2.  ChromeÏÂµÄDebug;
+2.  Chromeä¸‹çš„Debug;
     http://localhost:8081/debugger-ui
 3.  Cannot find entry file index.android.js in any of the roots
