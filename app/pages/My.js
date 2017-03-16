@@ -25,7 +25,7 @@ export default class My extends Component {
             {icon: "ios-heart", name: "我的收藏", color: "#fc7b53"},
             {icon: "md-images", name: "美食相册"},
             {icon: "logo-usd", name: "推荐有奖", subName: "5元现金", color: "#fc7b53"},
-            {icon: "ios-cart", name: "积分商城", subName: "0元好物在这里", color: "#94d94a"},
+            {icon: "ios-cart",name: "积分商城", subName: "0元好物在这里", color: "#94d94a"},
             {icon: "ios-medal", name: "饿了吗会员卡", subName: "未开通", color: "#ffc636"},
             {icon: "md-flower", name: "服务中心"},
             {icon: "ios-outlet", name: "欢迎评分"},

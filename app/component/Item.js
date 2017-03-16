@@ -62,8 +62,12 @@ export default class Item extends Component {
         font = font||"Ionicons"
         const Icon = Font[font]
         return(
-            <Text>XXX
-            </Text>
+            <View style={styles.listItem}>
+                {icon?(<Icon name={icon} size={px2dp(iconSize||20)} style={{width: 22, marginRight:5, textAlign:"center"}} color={color || "#4da6f0"} />):null}
+                <View style={[styles.listInfo, {borderTopWidth: !first?1:0}]}>
+                    <View style={{flex: 1}}><Text>{name}</Text></View>
+                </View>
+            </View>
         )
     }
     render() {
