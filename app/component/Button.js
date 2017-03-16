@@ -14,7 +14,6 @@ export default class Button extends Component {
         super(props);
         console.log('ItemButton',props);
     }
-
     render() {
         let ios = <TouchableHighlight {...this.props}>{this.props.children}</TouchableHighlight>
         let android = <View {...this.props}><TouchableNativeFeedback onPress={this.props.onPress}>{this.props.children}</TouchableNativeFeedback></View>

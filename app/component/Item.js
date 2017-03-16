@@ -5,6 +5,7 @@ import React,{Component,PropTypes} from 'react';
 import {
     View,
     Text,
+    Image,
     StyleSheet,
     Dimensions
     } from 'react-native';
@@ -66,6 +67,11 @@ export default class Item extends Component {
                 {icon?(<Icon name={icon} size={px2dp(iconSize||20)} style={{width: 22, marginRight:5, textAlign:"center"}} color={color || "#4da6f0"} />):null}
                 <View style={[styles.listInfo, {borderTopWidth: !first?1:0}]}>
                     <View style={{flex: 1}}><Text>{name}</Text></View>
+                    <View style={styles.listInfoRight}>
+                        {subName?(<Text>{subName}</Text>):null}
+                        {avatar?(<Image source={avatar} style={{width: 36, height: 36, resizeMode: "cover", overflow:"hidden", borderRadius: 18}}/>):null}
+                        {disable?null:(<Font.Ionicons style={{marginLeft:10}} name="ios-arrow-forward-outline" size={px2dp(18)} color="#bbb"/>)}
+                    </View>
                 </View>
             </View>
         )
@@ -79,6 +85,7 @@ export default class Item extends Component {
     }
 }
 
+Item.Button = ItemButton
 
 const styles = StyleSheet.create({
     listItem: {
