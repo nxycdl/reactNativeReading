@@ -5,7 +5,7 @@ export default class HomePage extends Component {
         return (
             <View>
                 <Text>
-                    Home Component
+                    Home Component Page
                 </Text>
             </View>
         )

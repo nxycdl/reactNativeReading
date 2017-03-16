@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react' ;
 import {View, Text, Dimensions, StyleSheet, Animated, Image} from 'react-native';
-/*图标*/
+/*图标使用图标字体的时候需要现在图标文件到assets的fonts目录下面*/
 import Icon from 'react-native-vector-icons/Ionicons';
 import TabNavigator from 'react-native-tab-navigator';
 import px2dp from '../../util';
@@ -39,23 +39,28 @@ export default class TabView extends Component {
     }
 
     render() {
+        /*调试styles*/
+        console.log(StyleSheet.flatten(styles.tabbar));
+
+
         return (
             <TabNavigator
-                hidesTabTouch={false}
-                tabBarShadowStyle={[styles.tabbar,(this.state.hideTabBar?styles.hide:{})]}
-                sceneStyle={{paddingBottom:styles.tabbar.height}}>
+                hidesTabTouch={true}
+                tabBarStyle={[styles.tabbar,(this.state.hideTabBar?styles.hide:{})]}
+                sceneStyle={{ paddingBottom: styles.tabbar.height }}>
                 {
-                    this.tableNames.map((item,i)=>{
+                    this.tableNames.map((item, i)=> {
                         return (
                             <TabNavigator.Item
                                 key={i}
                                 tabStyle={styles.tabStyle}
                                 title={item[0]}
+                                badgeText={99}
                                 selected={this.state.currentTab === item[2]}
                                 selectedTitleStyle={{color:'#3496f0'}}
                                 renderIcon={()=><Icon name={item[1]} size={px2dp(22)} color="#666"/>}
                                 renderSelectedIcon={()=><Icon name={item[1].replace(/\-outline$/, "")} size={px2dp(22)} color="#3496f0"/>}
-                                onPress={()=>{ this.setState({currentTable:item[2]})}}>
+                                onPress={()=>{ this.setState({currentTab:item[2]})}}>
                                 {item[3]}
                             </TabNavigator.Item>
                         )
@@ -70,16 +75,20 @@ export default class TabView extends Component {
 const styles = StyleSheet.create({
     tabbar: {
         height: px2dp(46),
-        alignItems:'center',
+        alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#fff'
+
+    },
+    tabbarheight: {
+        height: 200
     },
     hide: {
         transform: [
-            {translateX:width}
+            {translateX: width}
         ]
     },
-    tabStyle:{
+    tabStyle: {
         padding: px2dp(4)
     }
 })
