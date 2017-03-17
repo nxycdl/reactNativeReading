@@ -36,8 +36,7 @@ export default class My extends Component {
     }
 
     goPage(key, data = {}) {
-        console.log(key);
-        console.log(data);
+
         let pages = {
             "address": Address
         }
@@ -50,7 +49,7 @@ export default class My extends Component {
     }
 
     goProfile() {
-        console.log('goProfile');
+
         this.props.navigator.push({
             component: UserProfile,
             args: {}
@@ -69,7 +68,7 @@ export default class My extends Component {
     }
 
     rightPress(){
-        console.log('rightPress')
+
         this.props.navigator.push({
             component:Setting,
             args:{}
@@ -77,7 +76,7 @@ export default class My extends Component {
     }
 
     leftPress(){
-        console.log('leftPress');
+
     }
 
     _renderListItem(){
