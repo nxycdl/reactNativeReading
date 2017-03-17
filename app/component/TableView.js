@@ -40,9 +40,7 @@ export default class TabView extends Component {
 
     render() {
         /*调试styles*/
-        console.log(StyleSheet.flatten(styles.tabbar));
-
-
+        console.log('样式调试代码',StyleSheet.flatten(styles.tabbar));
         return (
             <TabNavigator
                 hidesTabTouch={true}

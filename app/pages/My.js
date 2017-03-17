@@ -16,6 +16,7 @@ import NavBar from '../component/NavBar'
 import Icon from 'react-native-vector-icons/Ionicons';
 let {width, height} = Dimensions.get('window');
 import UserProfile from '../component/UserProfile'
+import Setting from '../component/Setting'
 
 export default class My extends Component {
     constructor(props) {

@@ -12,7 +12,6 @@ import {
 export default class Button extends Component {
     constructor(props){
         super(props);
-        console.log('ItemButton',props);
     }
     render() {
         let ios = <TouchableHighlight {...this.props}>{this.props.children}</TouchableHighlight>

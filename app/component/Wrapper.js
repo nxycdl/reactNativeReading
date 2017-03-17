@@ -7,7 +7,6 @@ import {View, Text} from 'react-native' ;
 import TableView from './TableView';
 export default class Wrapper extends Component {
     constructor(props) {
-        console.log(props);
         super(props);
     }
 

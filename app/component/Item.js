@@ -28,7 +28,6 @@ const Font = {
 class ItemButton extends Component {
     constructor(props) {
         super(props)
-        console.log('ItemButton',props);
     }
 
     render() {
